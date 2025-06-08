@@ -58,6 +58,20 @@ const LandingPage = () => {
 
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
+      {/* Floating WhatsApp Button */}
+      <motion.a
+        href={`https://wa.me/${whatsappNumber}?text=Hi! I'm interested in getting a custom gym management app.`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-400 text-white p-4 rounded-full shadow-2xl transition-all duration-300"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 2, duration: 0.5 }}
+      >
+        <MessageCircle className="w-8 h-8" />
+      </motion.a>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center">
         <div 
